@@ -11,3 +11,5 @@
 /bin/
 /composer.phar
 /web/assets/vendor
+/node_modules
+/.sass-cache
