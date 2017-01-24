@@ -1,0 +1,32 @@
+<header class="bg_vaca" ng-include="'./app/templates/header.html'"></header>
+
+<section class="content">
+	<h1 flex layout="row" layout-align="center center">Antes de Tudo, Precisamos de Algumas Informações</h1>
+	
+	<div flex layout="row" layout-align="center center">
+
+		<form class="register-form">
+			<md-input-container class="md-block">
+	      		<input input-mask-number input-focus="PESO" ng-model="vm.cow.weight" type="text" aria-label="weight">
+	      		<span class="input-group right">KG</span>
+	    	</md-input-container>
+
+	    	<md-input-container class="md-block v-block">
+	      		<input input-mask-number input-focus="IDADE" ng-model="vm.cow.age" type="text" aria-label="age">
+	      		<span class="input-group right">ANOS</span>
+	    	</md-input-container>
+
+			<md-input-container class="md-block v-block">
+	      		<span class="input-group left">R$</span>
+	      		<input input-mask-number="dot" input-focus="PREÇO" ng-model="vm.cow.price" type="text" aria-label="price">
+	    	</md-input-container>
+	    	<md-button class="salvar" ng-click="vm.salvar()">SALVAR</md-button>
+	    	<md-button class="cadastradas" ng-click="vm.listar()">Vacas Cadastradas</md-button>
+	    </form>
+
+	</div>
+
+</section>
+
+
+<footer ng-include="'./app/templates/footer.html'"></footer>

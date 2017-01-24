@@ -1,0 +1,22 @@
+{
+  "name": "tag-vaca",
+  "version": "1.0.0",
+  "description": "Teste proposto para vaga de desenvolvedor",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1"
+  },
+  "devDependencies": {
+    "gulp-compass": "^2.1.0",
+    "gulp-run": "^1.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Everton Santos<eluiz182@gmail.com>",
+  "license": "ISC"
+}

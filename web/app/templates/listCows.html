@@ -1,0 +1,38 @@
+<header class="" ng-include="'./app/templates/header.html'"></header>
+
+<section class="content">
+
+	<div layout="row" layout-align="center center">
+		<md-button class="cadastrar-vaca" ng-click="vm.cadastrar()">Cadastrar Vaca</md-button>
+	</div>
+
+	<div layout="row" layout-align="center center">
+		
+		<table class="table">
+			<thead>
+				<th>PESO</th>
+				<th>IDADE</th>
+				<th>PREÇO</th>
+				<th>PASTO MENSAL</th>
+				<th>CUSTO ANUAL DA VACA</th>
+				<th></th>
+			</thead>
+			<tbody>
+				<tr ng-class="{'destaque': $index==0}" ng-repeat="cow in vm.cows | orderBy: 'custoAnual'">
+					<td>{{cow.weight}} KG</td>
+					<td>{{cow.age}}</td>
+					<td>{{cow.price | currency}}</td>
+					<td>{{cow.pastoMensal | currency}}</td>
+					<td>{{cow.custoAnual | currency}}</td>
+					<td class="action"><md-button class="md-small" ng-click="vm.excluir(cow.id)" class="md-hue-2">EXCLUIR</md-button></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+	
+	
+</section>
+
+<footer ng-include="'./app/templates/footer.html'"></footer>

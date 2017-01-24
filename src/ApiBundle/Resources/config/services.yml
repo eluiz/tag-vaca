@@ -1,0 +1,16 @@
+parameters:
+  cows:
+    base_uri: 'http://recrutamento.taginterativa.com.br/api/v1/'
+    object: 'cows'
+    headers:
+      'access-token': '4073b7d950'
+      'content-type': 'application/json'
+services:
+  api.exception_listener:
+        class: ApiBundle\EventListener\ExceptionListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }
+
+  api.cows:
+        class: ApiBundle\ApiService\ApiRequest
+        arguments: ['%cows%']

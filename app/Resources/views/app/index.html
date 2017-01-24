@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Vaquinha</title>
+        <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body ng-cloak>
+
+        <ng-view></ng-view>
+
+        <script src="{{ asset('assets/vendor/angular/angular.min.js') }}"></script>
+        <script src="{{ asset('assets/vendor/angular/angular-locale_pt-br.js') }}"></script>
+        <script src="{{ asset('assets/vendor/angular-route/angular-route.min.js') }}"></script>
+        <script src="{{ asset('assets/vendor/angular-aria/angular-aria.js') }}"></script>
+        <script src="{{ asset('assets/vendor/angular-animate/angular-animate.js') }}"></script>
+        <script src="{{ asset('assets/vendor/angular-material/angular-material.js') }}"></script>
+        <script src="{{ asset('assets/vendor/lodash/dist/lodash.min.js') }}"></script>
+        <script src="{{ asset('assets/vendor/restangular/dist/restangular.min.js') }}"></script>
+
+        <script src="/app/directives.js"></script>
+        <script src="/app/services.js"></script>
+        <script src="/app/controllers.js"></script>
+        <script src="/app/app.js"></script>
+
+    </body>
+</html>
