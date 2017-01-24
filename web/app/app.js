@@ -24,7 +24,8 @@
 	      .when('/list', {
 	      	templateUrl: 'app/templates/listCows.html',
 	      	controller: 'listCowsCtrl as vm'
-	      });
+	      })
+	      .otherwise({redirectTo:'/register'});
 
 	    RestangularProvider.setBaseUrl(Config.baseUrl);
 	}
