@@ -5,22 +5,31 @@
 	
 	<div flex layout="row" layout-align="center center">
 
-		<form class="register-form">
+		<form name="register-form" class="register-form">
 			<md-input-container class="md-block">
-	      		<input input-mask-number input-focus="PESO" ng-model="vm.cow.weight" type="text" aria-label="weight">
+	      		<input required input-mask-number input-focus="PESO" name="weight" ng-model="vm.cow.weight" type="text" aria-label="weight">
 	      		<span class="input-group right">KG</span>
+	      		<div ng-messages="register-form.weight.$error">
+	      			<div ng-message="required">Este campo é obrigatório</div>
+	      		</div>
 	    	</md-input-container>
 
 	    	<md-input-container class="md-block v-block">
-	      		<input input-mask-number input-focus="IDADE" ng-model="vm.cow.age" type="text" aria-label="age">
+	      		<input name="age" required input-mask-number input-focus="IDADE" ng-model="vm.cow.age" type="text" aria-label="age">
 	      		<span class="input-group right">ANOS</span>
+	      		<div ng-messages="register-form.age.$error">
+	      			<div ng-message="required">Este campo é obrigatório</div>
+	      		</div>
 	    	</md-input-container>
 
 			<md-input-container class="md-block v-block">
 	      		<span class="input-group left">R$</span>
-	      		<input input-mask-number="dot" input-focus="PREÇO" ng-model="vm.cow.price" type="text" aria-label="price">
+	      		<input name="price" required input-mask-number="dot" input-focus="PREÇO" ng-model="vm.cow.price" type="text" aria-label="price">
+	      		<div ng-messages="register-form.price.$error">
+	      			<div ng-message="required">Este campo é obrigatório</div>
+	      		</div>
 	    	</md-input-container>
-	    	<md-button class="salvar" ng-click="vm.salvar()">SALVAR</md-button>
+	    	<md-button  ng-disabled="{{register-form.$invalid}}" class="salvar" ng-click="vm.salvar()">SALVAR</md-button>
 	    	<md-button class="cadastradas" ng-click="vm.listar()">Vacas Cadastradas</md-button>
 	    </form>
 
